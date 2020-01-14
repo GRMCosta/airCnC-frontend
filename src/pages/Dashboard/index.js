@@ -22,8 +22,8 @@ export default function Dashboard() {
             return spot._id !== spot_id;
         });
         setSpots(newSpots);
-        await api.delete('/dashboard', {
-            params: {
+        await api.delete('/spots', {
+            headers: {
                 spot_id
             }
         });
